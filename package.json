@@ -1,6 +1,9 @@
 {
-  "name": "challenge",
+  "name": "@mle07/testgithubactions",
   "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/mle07/challenge-backend.git"
+  },
   "description": "",
   "main": "./dist/index.ts",
   "scripts": {
