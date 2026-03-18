@@ -34,5 +34,10 @@ jobs:
     environment: main
 
     steps:
-      - name: Publish package
-        run: npm publish --access restricted
+      # - name: Publish package
+      #   run: npm publish --access retsricted
+
+      - name: Publish to GitHub Packages
+        run: npm publish --registry=https://npm.pkg.github.com/
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
