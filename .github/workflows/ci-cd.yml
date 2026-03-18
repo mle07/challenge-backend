@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    if: github.event.push.merged == true
+    if: github.event.push == true
     runs-on: ubuntu-latest
 
     steps:
