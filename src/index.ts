@@ -9,7 +9,7 @@ const port = 3000;
 app.use("/api", router);
 
 // app.get("/", (req, res) => {
-//   console.log("packagejson", packagejson.devDependencies.typescript);
+//   console.log("packagejson", packa gejson.devDependencies.typescript);
 //   res.send("Hello World!");
 // });
 
