@@ -2,7 +2,6 @@ name: Express Backend CI/CD
 
 on:
   push:
-    types: [closed]
     branches:
       - main
 
