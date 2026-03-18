@@ -33,15 +33,15 @@ jobs:
       - name: Build application
         run: npm run build
 
-  deploy-dev:
-    name: Deploy to Development
+  deploy-main:
+    name: Deploy to main
     needs: build
     runs-on: ubuntu-latest
-    if: github.base_ref == 'development'
-    environment: development
+    if: github.base_ref == 'main'
+    environment: main
 
     steps:
       - name: Deploy to Dev Server
         run: |
-          echo "Deploying to Development Environment"
+          echo "Deploying to Main Environment"
           # Add your deployment commands here
