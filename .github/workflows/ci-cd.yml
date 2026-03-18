@@ -29,7 +29,6 @@ jobs:
     name: Deploy to main
     needs: build
     runs-on: ubuntu-latest
-    if: github.branch == 'main'
     environment: main
 
     steps:
