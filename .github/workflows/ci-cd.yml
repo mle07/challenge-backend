@@ -27,6 +27,11 @@ jobs:
       - name: Build application
         run: npm run build
 
+      - name: Publish to GitHub Packages
+        run: npm publish --access retsricted
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   deploy-main:
     name: Deploy to main
     needs: build
@@ -34,13 +39,7 @@ jobs:
     environment: main
 
     steps:
-      # - name: Publish package
-      #   run: npm publish --access retsricted
-
-      - name: Checkout source code
-        uses: actions/checkout@v4
-
-      - name: Publish to GitHub Packages
-        run: npm publish --access retsricted
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to Production Server
+        run: |
+          echo "Deploying to Production Environment"
+          # Add your deployment commands here
