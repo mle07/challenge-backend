@@ -1,7 +1,7 @@
 name: Express Backend CI/CD
 
 on:
-  push:
+  pull_request:
     types: [closed]
     branches:
       - main
