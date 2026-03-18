@@ -1,14 +1,14 @@
 name: Express Backend CI/CD
 
 on:
-  pull_request:
+  push:
     types: [closed]
     branches:
       - main
 
 jobs:
   build:
-    if: github.event.pull_request.merged == true
+    if: github.event.push.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -35,7 +35,5 @@ jobs:
     environment: main
 
     steps:
-      - name: Deploy to Dev Server
-        run: |
-          echo "Deploying to Main Environment"
-          # Add your deployment commands here
+      - name: Publish package
+        run: yarn publish --access restricted
